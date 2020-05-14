@@ -9,7 +9,7 @@ void main() => runApp(MyApp());
 // StatelessWidget -> Immutable Widget, that does not require state. Their properties can't change - all values are final
 class MyApp extends StatelessWidget {
   // @override -> (annotation) marks an instance member as overriding a superclass member with the same name.
-  @override
+  @override // for methods where the superclass is not under the programmer's control, the superclass is in a different library or package, and it is not considered stable.
   // Widget -> Describes the configuration for an [Element].
   // build() -> method that describes how to display the widget in terms of other, lower level widgets.
   // BuildContext -> A handle to the location of a widget in the widget tree.
@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+// State -> The logic and internal state for a [StatefulWidget].
 class RandomWordsState extends State<RandomWords> {
   @override
   Widget build(BuildContext context) {
@@ -36,6 +37,7 @@ class RandomWordsState extends State<RandomWords> {
   }
 }
 
+// StatefulWidget -> A widget that has mutable state.
 class RandomWords extends StatefulWidget {
   @override
   RandomWordsState createState() => RandomWordsState();
