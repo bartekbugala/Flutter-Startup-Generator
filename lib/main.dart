@@ -38,9 +38,10 @@ class RandomWordsState extends State<RandomWords> {
   }
 
   Widget _buildSuggestions() {
+    // Creates a scrollable, linear array of widgets that are created on demand.
     return ListView.builder(
         padding: const EdgeInsets.all(16.0),
-        // itemBuilder -> Creates a scrollable, linear array of widgets that are created on demand.
+        // itemBuilder -> callback creates a scrollable, linear array of widgets that are created on demand.
         //              here the itemBuilder callback is called once per suggested word pairing,
         //              and places each suggestion into a ListTile row.
         //              For even rows, the function adds a ListTile row for the word pairing. For odd rows,
